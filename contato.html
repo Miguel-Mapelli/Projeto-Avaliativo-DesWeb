@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  contato.html - PÁGINA 4: CONTATO
+  Formulário simples (nome e mensagem) com validação em JavaScript.
+-->
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Desenvolvimento Web</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <nav class="navbar navbar-dark navbar-if fixed-top">
+    <div class="container-fluid px-4">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-disciplina.html">Sobre a Disciplina</a></li>
+          <li class="nav-item"><a class="nav-link" href="conteudos.html">Conteúdos Estudados</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid mt-4">
+
+    <h1>Contato</h1>
+
+    <p>
+      Ficou com alguma <em>dúvida</em> sobre a disciplina de Desenvolvimento
+      Web? Preencha o formulário abaixo e envie sua mensagem.
+    </p>
+
+    <!-- FORMULÁRIO com validação em JavaScript
+    
+         O atributo onsubmit="return validarFormulario()" chama a
+         função do arquivo script.js sempre que o botão de enviar é
+         clicado. Se a função retornar "false", o formulário não é
+         enviado e a página não recarrega -->
+    <form onsubmit="return validarFormulario()">
+
+      <div class="mb-3">
+        <label for="nome" class="form-label"><strong>Nome:</strong></label>
+        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome">
+      </div>
+
+      <div class="mb-3">
+        <label for="mensagem" class="form-label"><strong>Mensagem:</strong></label>
+        <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-if">Enviar mensagem</button>
+
+      <!-- Essa div começa vazia. O JavaScript escreve aqui o aviso
+           de erro (em vermelho) ou de sucesso (em verde) -->
+      <p id="avisoFormulario" class="mt-3"></p>
+    </form>
+
+  </main>
+
+  <footer class="footer-if text-center">
+    <p class="mb-0">Projeto Avaliativo - Análise e Desenvolvimento de Sistemas (Web)</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
