@@ -1,0 +1,127 @@
+/* ESTILO.CSS
+   Estilos personalizados do site. O Bootstrap cuida da maior parte
+   do layout (grid, botões, menu, responsividade). Aqui só ajustamos
+   cores e alguns detalhes simples para dar identidade visual ao site*/
+
+:root {
+  --if-verde: #2e8b57;        /* Verde principal do Instituto Federal */
+  --if-verde-escuro: #21663f; /* Verde mais escuro, usado no hover */
+  --if-laranja: #f39200;      /* Cor de destaque */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px;      /* espaço para a navbar fixa não cobrir o conteúdo */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container-fluid {
+  flex: 1;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media (max-width: 768px) {
+  main.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+h1, h2, h3 {
+  color: var(--if-verde);
+}
+
+/* NAVBAR
+   Layout simples: apenas o botão de menu (3 barrinhas), que abre a
+   lista de links de navegação.*/
+.navbar-if {
+  background-color: var(--if-verde) !important;
+}
+
+.navbar-if .navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-if .navbar-toggler-icon {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.navbar-if .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-if .nav-link.active {
+  color: var(--if-laranja) !important;
+  font-weight: bold;
+}
+
+.navbar-if .nav-link:hover {
+  color: var(--if-laranja) !important;
+}
+
+/* BOTÕES, CAIXAS DE MENSAGEM E LISTAS CLICÁVEIS*/
+.btn-if {
+  background-color: var(--if-verde);
+  border-color: var(--if-verde);
+  color: #ffffff;
+}
+
+.btn-if:hover {
+  background-color: var(--if-verde-escuro);
+  border-color: var(--if-verde-escuro);
+  color: #ffffff;
+}
+
+/* Caixa usada para mostrar mensagens escritas pelo JavaScript */
+.caixa-mensagem {
+  border: 2px solid var(--if-verde);
+  background-color: #eafaf0;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* Itens de lista clicáveis (página de Conteúdos)*/
+.item-clicavel {
+  cursor: pointer;
+}
+
+.item-clicavel:hover {
+  color: var(--if-verde-escuro);
+  font-weight: bold;
+}
+
+/* Imagens usadas dentro do conteúdo das páginas */
+.imagem-pagina {
+  border: 4px solid var(--if-verde);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* RODAPÉ*/
+.footer-if {
+  background-color: var(--if-verde);
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* RESPONSIVIDADE*/
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+}
